@@ -1,0 +1,61 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.caurosel-container{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+.caoursel-slider{
+    width: 100%;
+    height: 100%;
+}
+.slideImage{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: 0.8s;
+}
+.carousal-Btn{
+    position: absolute;
+    display: flex;
+    top: 42%;   
+    width: 100%;
+    justify-content: space-between;
+}
+.carousal-leftBtn,
+.carousal-rightBtn{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.4;
+}
+.carousal-arrow {
+    border: solid white;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
+    padding: 7px;
+  }
+  
+.carousal-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+.carousal-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  

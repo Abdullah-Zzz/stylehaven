@@ -1,0 +1,128 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "type": "Oversized Shirts",
+      "image": "https://www.pngmart.com/files/22/Oversized-T-Shirt-PNG-HD-Isolated.png"
+    },
+    {
+      "id": 2,
+      "type": "Premium Cotton Shirts",
+      "image": "http://myshirt.com.my/wp-content/uploads/2016/01/76000-Gildan-Premium-Soft-Ring-Spun-T-Shirt-Military-Green.jpg"
+    }
+  ],
+  "availableItems": [
+    {
+      "name": "Oversized Shirts",
+      "id": 3,
+      "details": [
+        {
+          "id": 4,
+          "type": "Classic Oversized Black Shirt",
+          "discountPerc": 30,
+          "qty": 25,
+          "price": 1400,
+          "discountPrice": 980,
+          "sizes": ["SM", "MD", "LG"],
+          "image": "https://blacknavybd.com/wp-content/uploads/2023/05/Black-oversized-tshirt-3.jpg"
+        },
+        {
+          "id": 5,
+          "type": "Trendy Oversized Navy Shirt",
+          "discountPerc": 25,
+          "qty": 30,
+          "price": 1600,
+          "discountPrice": 1200,
+          "sizes": ["SM", "MD", "LG", "XL"],
+          "image": "https://snover.com/wp-content/uploads/2023/07/Navy-Blue-Oversized-T-Shirt--600x600.webp"
+        },
+        {
+          "id": 6,
+          "type": "Oversized Grey Hoodie Shirt",
+          "discountPerc": 35,
+          "qty": 15,
+          "price": 2000,
+          "discountPrice": 1300,
+          "sizes": ["MD", "LG", "XL"],
+          "image": "https://www.filmyvastra.com/wp-content/uploads/2020/08/Grey-Hoodie.jpg"
+        },
+        {
+          "id": 11,
+          "type": "Casual Oversized White Shirt",
+          "discountPerc": 20,
+          "qty": 40,
+          "price": 1200,
+          "discountPrice": 960,
+          "sizes": ["SM", "MD", "LG", "XL"],
+          "image": "https://static.vecteezy.com/system/resources/previews/012/027/401/original/white-oversize-t-shirt-mockup-realistic-t-shirt-png.png"
+        },
+        {
+          "id": 12,
+          "type": "Bold Oversized Red Shirt",
+          "discountPerc": 28,
+          "qty": 18,
+          "price": 1800,
+          "discountPrice": 1296,
+          "sizes": ["SM", "MD", "LG", "XL"],
+          "image": "https://slatehash.com/cdn/shop/files/VG-SH-46203006.jpg?v=1686387080"
+        }
+      ]
+    },
+    {
+      "name": "Premium Cotton Shirts",
+      "id": 7,
+      "details": [
+        {
+          "id": 8,
+          "type": "Premium Cotton Black Shirt",
+          "discountPerc": 30,
+          "qty": 22,
+          "price": 1700,
+          "discountPrice": 1190,
+          "sizes": ["SM", "MD", "LG"],
+          "image": "https://nikfashions.in/wp-content/uploads/2019/03/Black-Plain-T-shirt-Mockup-1200x1200.jpg"
+        },
+        {
+          "id": 9,
+          "type": "Elegant Cotton Blue Shirt",
+          "discountPerc": 25,
+          "qty": 28,
+          "price": 1800,
+          "discountPrice": 1350,
+          "sizes": ["SM", "MD", "LG", "XL"],
+          "image": "https://www.pngarts.com/files/5/Plain-Blue-T-Shirt-PNG-Image-Background.png"
+        },
+        {
+          "id": 10,
+          "type": "Casual Cotton White Shirt",
+          "discountPerc": 22,
+          "qty": 35,
+          "price": 1600,
+          "discountPrice": 1248,
+          "sizes": ["SM", "MD", "LG", "XL"],
+          "image": "https://img.favpng.com/17/10/0/t-shirt-sleeve-white-cotton-clothing-png-favpng-NDADwmyHwfrzVWRFbWkuinbU3.jpg"
+        },
+        {
+          "id": 13,
+          "type": "Designer Cotton Maroon Shirt",
+          "discountPerc": 32,
+          "qty": 12,
+          "price": 2000,
+          "discountPrice": 1360,
+          "sizes": ["MD", "LG", "XL"],
+          "image": "https://fullsourcemedia.s3.amazonaws.com/images/items/c/raw/5250_Maroon_2_A.jpg"
+        },
+        {
+          "id": 14,
+          "type": "Lux Cotton Olive Green Shirt",
+          "discountPerc": 27,
+          "qty": 18,
+          "price": 1900,
+          "discountPrice": 1387,
+          "sizes": ["SM", "MD", "LG", "XL"],
+          "image": "https://us.stuartslondon.com/images/armor-lux-organic-cotton-heritage-t-shirt-argile-p57325-828753_image.jpg"
+        }
+      ]
+    }
+  ]
+}
