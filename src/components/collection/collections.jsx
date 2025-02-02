@@ -1,23 +1,36 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios"
+import Loading from '../loadingComp/loading'
 
 function Collection() {
 
     const backend_url = import.meta.env.VITE_BACKEND_URL
     const [Info, setInfo] = React.useState()
+    const [loading,setLoading] = React.useState(false) 
 
     React.useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(`${backend_url}/api/data/getitems`)
-            setInfo(res.data[0])
+            try{
+                setLoading(true)
+                const res = await axios.get(`${backend_url}/api/data/getitems`)
+                setInfo(res.data[0])
+            }
+            catch(err){
+                throw err
+            }
+            finally{
+                setLoading(false)
+            }
+            
         }
         fetchData()
     }, [])
 
     return (
         <section className='flex flex-col items-center mt-14'>
-            {
+            
+            { loading ? <Loading /> : 
                 Info && Info.availableItems.map((item, index) => {
                     return (
                         <div key={index} className='text-center mt-12 w-screen'>

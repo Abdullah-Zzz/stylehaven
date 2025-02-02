@@ -8,6 +8,7 @@ import axios from 'axios';
 export default function BasicMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [loading, setLoading] = React.useState(false)
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -18,6 +19,7 @@ export default function BasicMenu(props) {
   const Backend_URL = import.meta.env.VITE_BACKEND_URL
   const handleLogout = async (e) =>{
     try{
+      setLoading(true)
       const res = await axios.post(`${Backend_URL}/api/users/logout/`,{},{
         validateStatus : (status) =>{
           return status < 500
@@ -31,10 +33,14 @@ export default function BasicMenu(props) {
     catch(err){
       console.log(err)
     }
+    finally{
+      setLoading(false)
+    }
   }
 
   return (
     <div>
+    {loading && <FullScreenLoading/>}
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}

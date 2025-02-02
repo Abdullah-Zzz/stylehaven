@@ -72,12 +72,13 @@ const Orders = () => {
   const [openModal, setOpenModal] = useState(false); // Modal visibility state
   const [orderIdToCancel, setOrderIdToCancel] = useState(null); // Order ID to cancel
   const Backend_URL = import.meta.env.VITE_BACKEND_URL;
+  const [loading, setLoading] = React.useState(false)
 
   const notify = (message) => toast(message);
 
-  // Fetch Orders
   const fetchOrders = async () => {
     try {
+      setLoading(true)
       const response = await axios.get(`${Backend_URL}/api/users/track/orders`, {
         withCredentials: true,
         validateStatus: (status) => status < 500,
@@ -91,15 +92,19 @@ const Orders = () => {
     } catch (error) {
       console.error("Error fetching orders:", error);
     }
+    finally{
+      setLoading(false)
+
+    }
   };
 
   React.useEffect(() => {
     fetchOrders();
   }, []);
 
-  // Handle Deleting Orders
   const handleDeletingOrders = async (ID) => {
     try {
+      setLoading(true)
       const res = await axios.post(`${Backend_URL}/api/users/delete/order/${ID}`, {}, {
         withCredentials: true,
         validateStatus: (status) => status < 500,
@@ -113,21 +118,22 @@ const Orders = () => {
     } catch (err) {
       console.error("Error canceling order:", err);
     }
+    finally{
+      setLoading(false)
+
+    }
   };
 
-  // Open the confirmation modal
   const handleOpenModal = (ID) => {
     setOrderIdToCancel(ID);
     setOpenModal(true);
   };
 
-  // Close the confirmation modal
   const handleCloseModal = () => {
     setOpenModal(false);
     setOrderIdToCancel(null);
   };
 
-  // Confirm cancellation of the order
   const handleConfirmCancel = () => {
     if (orderIdToCancel) {
       handleDeletingOrders(orderIdToCancel);
@@ -136,6 +142,8 @@ const Orders = () => {
   };
 
   return (
+    <>
+    {loading && <FullScreenLoading/>}
     <Box>
       {orders.length === 0 ? (
         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", mt: 6 }}>
@@ -244,6 +252,7 @@ const Orders = () => {
 
       <ToastContainer />
     </Box>
+    </>
   );
 };
 
