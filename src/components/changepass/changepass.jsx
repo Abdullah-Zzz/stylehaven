@@ -43,7 +43,6 @@ const ResetPassword = () => {
     <>
     {loading ? <FullScreenLoading /> : null}
     <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
-        <Nav/>
       <div className="w-full max-w-md mx-auto p-8 space-y-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-gray-800 text-center">Reset Password</h2>
         <p className="text-sm text-gray-600 text-center">

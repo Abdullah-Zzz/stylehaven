@@ -30,7 +30,6 @@ const ForgotPassword = () => {
     <>
     {loading ? <FullScreenLoading /> : null}
     <div className="min-h-screen flex flex-col justify-between bg-gray-100">
-    <Nav/>
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md mx-auto mt-24 mb-24">
         <h2 className="text-2xl font-bold text-gray-800 text-center">Forgot Password</h2>
         <p className="text-sm text-gray-600 text-center">

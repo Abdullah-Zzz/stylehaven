@@ -117,7 +117,6 @@ export default function BuyNow() {
     return (
         <section className="w-full min-h-screen bg-gray-50">
             {loading && <FullScreenLoading />}
-            <Nav />
             <div className="px-6 mt-8 lg:mt-12">
                 {/* Step Indicator */}
                 <div className="flex flex-col justify-around mb-8 sm:flex-row ">

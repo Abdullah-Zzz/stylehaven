@@ -19,7 +19,6 @@ function Home() {
   },[])
   return (
     <>
-        <Nav/>
         <Hero/>
         <Categories />
         <Collection />

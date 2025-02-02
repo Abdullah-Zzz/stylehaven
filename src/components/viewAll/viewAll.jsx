@@ -20,10 +20,13 @@ import {
     Collapse,
 } from "@mui/material";
 import FilterListIcon from "@mui/icons-material/FilterList";
+import FullScreenLoading from "../loadingComp/fullScreenloader";
+
 
 export default function ViewAll() {
     const { name } = useParams();
     const navigate = useNavigate();
+    const [loading, setLoading] = React.useState(false)
 
     const backend_url = import.meta.env.VITE_BACKEND_URL;
     const [Info, setInfo] = useState();
@@ -38,8 +41,18 @@ export default function ViewAll() {
             }
         };
         const fetchData = async () => {
-            const res = await axios.get(`${backend_url}/api/data/getitems`);
-            setInfo(res.data[0]);
+            try{
+                setLoading(true)
+                const res = await axios.get(`${backend_url}/api/data/getitems`);
+                setInfo(res.data[0]);
+            }
+            catch(err){
+                throw err
+            }
+            finally{
+                setLoading(false)
+            }
+           
         };
         fetchData();
         chkUrl();
@@ -68,7 +81,7 @@ export default function ViewAll() {
 
     return (
         <Box>
-            <Nav />
+            {loading && <FullScreenLoading />}
             <Box mt={4} px={2}>
                 {/* Responsive Filters Section */}
                 <Box

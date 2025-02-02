@@ -54,6 +54,7 @@ export default function Checkout() {
     React.useEffect(() => {
         (async () => {
             try {
+                setLoading(true)
                 const res = await axios.get(`${Backend_URL}/api/users/details`, {
                     validateStatus: (status) => status < 500,
                     withCredentials: true,
@@ -69,6 +70,9 @@ export default function Checkout() {
                 }
             } catch {
                 notify("Please refresh the page.");
+            }
+            finally{
+                setLoading(false)
             }
         })();
     }, []);
@@ -95,9 +99,8 @@ export default function Checkout() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gray-50">
+        <section className="w-full min-h-screen bg-gray-50 pt-2">
             {loading && <FullScreenLoading />}
-            <Nav />
             <div className="px-6 mt-8 lg:mt-12">
                 {/* Step Indicator */}
                 <div className="flex flex-col justify-around mb-8 sm:flex-row ">

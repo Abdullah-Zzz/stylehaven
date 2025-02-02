@@ -7,7 +7,6 @@ export default function NotFound(){
 
     return(
         <section className="">
-            <Nav />
             <section className="flex mt-4 justify-center items-center min-h-[60vh]">
                 <div className="p-[20px] text-[50px] border-r-2 border-black sm:text-[120px]">
                     <h1>404</h1>

@@ -28,8 +28,7 @@ export default function Cart() {
     }, []);
 
     return (
-        <section className="min-h-screen bg-gray-100">
-            <Nav />
+        <section className="min-h-screen bg-gray-100 pt-2">
             {items.length === 0 ? (
                 <div className="flex flex-col mt-24 items-center text-center">
                     <img

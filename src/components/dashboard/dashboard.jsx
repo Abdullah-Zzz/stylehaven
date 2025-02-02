@@ -19,7 +19,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <Nav />
       <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, minHeight: "100vh" }}>
         {/* Sidebar */}
         <Box

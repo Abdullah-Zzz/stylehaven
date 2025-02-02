@@ -63,7 +63,6 @@ export default function Register() {
           bgcolor: "#f4f4f4",
         }}
       >
-      <Nav />
 
         <Container
           maxWidth="sm"

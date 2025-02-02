@@ -15,10 +15,13 @@ import BuyNow from './components/buynow/buynow'
 import { Button } from '@mui/material'
 import ForgotPassword from './components/forgotpass/forgotpass'
 import ResetPassword from './components/changepass/changepass'
+import Nav from './components/Home/nav/nav'
 
 function App() {
 
   return (
+    <>
+    <Nav/>
     <Routes>
       <Route path='/' element={<Home />}></Route>
       <Route path='/order/:name/:id' element={<Order/>}></Route>
@@ -47,6 +50,8 @@ function App() {
 
       <Route path='/register/link/:token' element={<CheckLink />} > </Route>
     </Routes>
+    </>
+
   )
 }
 

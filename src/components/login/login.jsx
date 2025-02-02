@@ -50,7 +50,6 @@ export default function Login() {
 
   return (
     <>
-      {loading ? <FullScreenLoading /> : null}
       <Box
         sx={{
           display: "flex",
@@ -60,7 +59,6 @@ export default function Login() {
           bgcolor: "#f4f4f4",
         }}
       >
-        <Nav />
 
         <Container
           maxWidth="sm"
