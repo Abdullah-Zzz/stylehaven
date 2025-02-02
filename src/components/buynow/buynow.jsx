@@ -41,8 +41,8 @@ export default function BuyNow() {
     const notify = (message) => toast(message);
     const handleLogin = async (e) => {
         e.preventDefault();
-        setLoading(true);
         try {
+            setLoading(true);
             const res = await axios.post(`${Backend_URL}/api/users/login/`, loginData, {
                 validateStatus: (status) => status < 500,
                 withCredentials: true,
@@ -51,14 +51,16 @@ export default function BuyNow() {
             if (res.status === 200) location.reload();
             else notify(res.data.message);
         } catch {
-            setLoading(false);
             notify("An error occurred during login.");
         }
+        finally{
+            setLoading(false);
+        }
     };
-    console.log(orderDetails)
     React.useEffect(() => {
         (async () => {
             try {
+                setLoading(true);
                 const res = await axios.get(`${Backend_URL}/api/users/details`, {
                     validateStatus: (status) => status < 500,
                     withCredentials: true,
@@ -75,11 +77,15 @@ export default function BuyNow() {
             } catch {
                 notify("Please refresh the page.");
             }
+            finally{
+                setLoading(false)
+            }
         })();
     }, []);
     React.useEffect(()=>{
         const getItemDetails = async () =>{
             try{
+                setLoading(true);
                 const res =  await axios.get(`${Backend_URL}/api/data/getitems`)
                 if (res.status == 200){
                     setItems(res.data[0].availableItems)
@@ -88,6 +94,9 @@ export default function BuyNow() {
             }
             catch{
                 throw err
+            }
+            finally{
+                setLoading(false)
             }
         }
         getItemDetails()
@@ -113,9 +122,8 @@ export default function BuyNow() {
             notify("An error occurred during checkout."+err);
         }
     };
-    console.log(orderDetails.itemID[id])
     return (
-        <section className="w-full min-h-screen bg-gray-50">
+        <section className="w-full min-h-screen bg-gray-50 pt-2">
             {loading && <FullScreenLoading />}
             <div className="px-6 mt-8 lg:mt-12">
                 {/* Step Indicator */}
