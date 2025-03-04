@@ -35,6 +35,7 @@ export default function Cart() {
                         src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-10929688-8779494.png"
                         alt="Empty Cart"
                         className="w-72 md:w-96"
+                        loading="lazy"
                     />
                     <h1 className="text-2xl font-bold text-gray-700 mt-4">Your Cart is Empty</h1>
                     <p className="text-gray-500 mt-2">Start adding items to see them here!</p>
@@ -62,6 +63,7 @@ export default function Cart() {
                                             src={item.image}
                                             alt={item.type}
                                             className="w-full md:w-32 lg:w-40 h-auto object-cover"
+                                            loading="lazy"
                                         />
                                         <div className="flex flex-col flex-grow pl-4">
                                             <div className="flex justify-between items-center">

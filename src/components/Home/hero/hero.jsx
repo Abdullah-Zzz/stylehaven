@@ -35,7 +35,7 @@ export default function Hero() {
             </div>
 
             <div className=" flex items-start justify-end xl:w-[45%] lg:w-[55%] mt-6 lg:mt-2 rounded-lg ">
-              <img src="/hero-min.jpg" alt="" className="h-full w-auto  object-cover" />
+              <img src="/hero-min.jpg" alt="" className="h-full w-auto  object-cover" loading="lazy"/>
             </div>
 
           </div>

@@ -150,6 +150,7 @@ const Orders = () => {
             src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-10929688-8779494.png"
             alt="Empty Cart"
             style={{ width: "150px", height: "auto" }}
+            loading="lazy"
           />
           <Typography variant="h6" sx={{ mt: 2 }}>
             You haven't placed any orders.
@@ -190,6 +191,7 @@ const Orders = () => {
                           src={item.image}
                           alt={item.type}
                           style={{ width: "50px", height: "50px", marginRight: "10px", objectFit: "cover" }}
+                          loading="lazy"
                         />
                         <Box>
                           <Typography variant="body2" sx={{ fontWeight: "bold" }}>

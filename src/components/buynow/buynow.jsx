@@ -284,6 +284,7 @@ export default function BuyNow() {
                                         src={selectedItem.image}
                                         alt={selectedItem.type}
                                         className="w-16 h-16 object-cover"
+                                        loading="lazy"
                                     />
                                     <div className="flex-1 ml-4">
                                         <p className="text-sm font-semibold">{selectedItem.type}</p>

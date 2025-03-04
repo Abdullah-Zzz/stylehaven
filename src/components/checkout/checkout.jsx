@@ -260,6 +260,7 @@ export default function Checkout() {
                                         src={item.image}
                                         alt={item.type}
                                         className="w-16 h-16 object-cover"
+                                        loading="lazy"
                                     />
                                     <div className="flex-1 ml-4">
                                         <p className="text-sm font-semibold">{item.type}</p>

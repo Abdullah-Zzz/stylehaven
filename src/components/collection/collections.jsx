@@ -43,7 +43,7 @@ function Collection() {
                                         return (
                                             <Link to={`/order/${item.name.split(" ")[0].toLowerCase()}/${shirt.id}`} key={index} className='w-[80%] md:w-96'>
                                                 <div className="md:w-96 flex flex-col items-center justify-between pb-6 pt-6 mb-4 md:mr-4 bg-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg border border-gray-200">
-                                                    <img src={shirt.image} alt={shirt.type} className='w-full object-cover rounded-t-lg' />
+                                                    <img src={shirt.image} alt={shirt.type} className='w-full object-cover rounded-t-lg' loading='lazy'/>
                                                     <div className='p-4 text-center'>
                                                         <p className='font-bold text-lg text-gray-800'>{shirt.type}</p>
                                                         <div className='flex flex-col items-center mt-2'>

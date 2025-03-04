@@ -24,7 +24,7 @@ export default function ImageSlider(props) {
         <div className="caurosel-container">
             <div className="caoursel-slider">
                 {slides.map((src, index) => (
-                    <img key={index} src={src} alt={`Slide ${index + 1}`} className="slideImage" style={{left:`${index*100}%`}}/>
+                    <img key={index} src={src} alt={`Slide ${index + 1}`} className="slideImage" style={{left:`${index*100}%`}} loading="lazy"/>
                 ))}
             </div>
             <div className="carousal-Btn">
