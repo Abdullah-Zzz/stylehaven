@@ -2,39 +2,38 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-white pt-8 pb-8 mt-8">
+        <footer className="bg-black text-white pt-8 pb-8 mt-8">
             {/* Footer Container */}
             <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* Logo and Description */}
                 <div>
-                    <h1 className="text-3xl font-bold text-gray-700 mb-4">Logo</h1>
-                    <p className="text-gray-400">
+                    <h1 className="text-3xl font-bold text-gray-400 mb-4">StyleHaven</h1>
+                    <p className="text-white">
                         Your trusted partner for the best products and services. We deliver quality
                         and satisfaction, always.
                     </p>
                 </div>
-
                 {/* Quick Links */}
                 <div>
-                    <h2 className="text-xl font-semibold text-gray-700 mb-4">Quick Links</h2>
+                    <h2 className="text-xl font-semibold text-gray-400 mb-4 ">Quick Links</h2>
                     <ul className="space-y-2">
                         <li>
-                            <a href="/" className="text-gray-400  hover:text-purple-400 transition">
+                            <a href="/" className="text-white  hover:text-purple-400 transition">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="/about" className="text-gray-400 hover:text-purple-400 transition">
+                            <a href="/about" className="text-white hover:text-purple-400 transition">
                                 About Us
                             </a>
                         </li>
                         <li>
-                            <a href="/services" className=" text-gray-400 hover:text-purple-400 transition">
+                            <a href="/services" className=" text-white hover:text-purple-400 transition">
                                 Services
                             </a>
                         </li>
                         <li>
-                            <a href="/contact" className="text-gray-400 hover:text-purple-400 transition">
+                            <a href="/contact" className="text-white hover:text-purple-400 transition">
                                 Contact Us
                             </a>
                         </li>
@@ -43,27 +42,25 @@ export default function Footer() {
 
                 {/* Contact Info */}
                 <div>
-                    <h2 className="text-xl font-semibold text-gray-700 mb-4">Contact</h2>
+                    <h2 className="text-xl font-semibold text-gray-400 mb-4">Contact</h2>
                     <ul className="space-y-2">
                         <li>
-                            <span className="font-bold text-gray-400">Phone:</span> +1 234 567 890
+                            <span className="font-bold text-white">Phone:</span> +1 234 567 890
                         </li>
                         <li>
-                            <span className="font-bold text-gray-400">Email:</span> support@example.com
+                            <span className="font-bold text-white">Email:</span> support@example.com
                         </li>
                         <li>
-                            <span className="font-bold text-gray-400">Address:</span> 123 Main Street, City, Country
+                            <span className="font-bold text-white">Address:</span> 123 Main Street, City, Country
                         </li>
                     </ul>
                 </div>
-
                 {/* Social Media */}
                 <div>
-                    <h2 className="text-xl font-semibold text-gray-700 mb-4">Follow Us</h2>
+                    <h2 className="text-xl font-semibold text-gray-400 mb-4">Follow Us</h2>
                     <div className="flex space-x-4">
                         <a
                             href="#"
-                            className="p-2 bg-purple-600 rounded-full hover:bg-purple-500 transition"
                             aria-label="Facebook"
                         >
                             <svg
@@ -77,7 +74,6 @@ export default function Footer() {
                         </a>
                         <a
                             href="#"
-                            className="p-2 bg-purple-600 rounded-full hover:bg-purple-500 transition"
                             aria-label="Twitter"
                         >
                             <svg
@@ -91,7 +87,6 @@ export default function Footer() {
                         </a>
                         <a
                             href="#"
-                            className="p-2 bg-purple-600 rounded-full hover:bg-purple-500 transition"
                             aria-label="Instagram"
                         >
                             <svg
